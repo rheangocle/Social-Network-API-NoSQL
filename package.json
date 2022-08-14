@@ -1,5 +1,5 @@
 {
-  "name": "social-network-api",
+  "name": "social-network-api-nosql",
   "version": "1.0.0",
   "description": "Mongoose back-end project",
   "main": "index.js",

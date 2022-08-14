@@ -1,14 +1,14 @@
 # Social-Network-API-NoSQL
 
-## Your Task
+![License Badge](https://img.shields.io/github/license/mmeii/workout-tracker)
 
-MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
+## Table of Contents
 
-Your Challenge is to build an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. You’ll use Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express.js](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
-
-No seed data is provided, so you’ll need to create your own data using Insomnia after you’ve created your API.
-
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Links](#Links)
+* [Features](#Features)
+* [License](#License)
 
 ## User Story
 
@@ -55,12 +55,6 @@ The following animation shows the POST and DELETE routes for a user’s friend l
 ![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
 
 In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
-
-## Getting Started
-
-Be sure to have MongoDB installed on your machine. Follow the [MongoDB installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/mongodb/how-to-install-mongodb) to install MongoDB locally.
-
-Use the following guidelines to set up your models and API routes:
 
 ### Models
 
@@ -208,11 +202,12 @@ This will not be a model, but rather will be used as the `reaction` field's subd
 
 ## Review
 
-You are required to submit BOTH of the following for review:
+Need:
 
 * A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+* The URL of the GitHub repository.
 
 ---
-© 2022
+Copyright © 2022 Rhea Le
+Licensed under [MIT](License) license
