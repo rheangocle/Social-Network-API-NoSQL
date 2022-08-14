@@ -84,7 +84,7 @@ module.exports = {
   },
 
   // Add a reaction
-  addVideoResponse(req, res) {
+  addThoughtReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $addToSet: { reactions: req.body } },
