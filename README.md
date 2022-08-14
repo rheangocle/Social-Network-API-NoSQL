@@ -2,21 +2,35 @@
 
 ![License Badge](https://img.shields.io/github/license/mmeii/workout-tracker)
 
+## Summary
+
+Creating an API for a social media network using MongoDB for a NoSQL database so that the website can handle large amounts of data.
+
 ## Table of Contents
 
-* [Installation](#installation)
+* [Features](#features)
+* [Installations](#installations)
 * [Usage](#usage)
-* [Links](#Links)
 * [Features](#Features)
-* [License](#License)
+* [Author](#author)
 
-## User Story
+## Features
 
-```md
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
+* Node.js
+* Express.js
+* MongoDB
+
+## Installations
+
+Mongoose - ODM library for MongoDB
+
 ```
+npm i mongoose --save
+```
+
+## Usage
+
+## Features
 
 ## Acceptance Criteria
 
