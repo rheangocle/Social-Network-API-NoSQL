@@ -1,4 +1,4 @@
-const { Thought, User } = require('../models');
+const { Thought, User, Reaction } = require('../models');
 
 module.exports = {
   // Get all thoughts
@@ -11,7 +11,7 @@ module.exports = {
   // Get a thought
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
-      .select('-__v')
+      // .select('-__v')
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with that ID' })
@@ -30,7 +30,8 @@ module.exports = {
           { $addToSet: { thoughts: thought._id } },
           { new: true }
         );
-      }).then((user) =>
+      })
+      .then((user) =>
         !user
           ? res.status(404).json({
             message: 'Thought created, but found no user with that ID',
@@ -63,11 +64,11 @@ module.exports = {
 
   // Delete a thought by its id
   deleteThought(req, res) {
-    Thought.findOneAndRemove({ _id: req.params.thouhgtId })
+    Thought.findOneAndRemove({ _id: req.params.thoughtId })
       .then((thought) =>
         !thought
           ? res.status(404).json({ message: 'No thought with this id!' })
-          : Thought.findOneAndUpdate(
+          : User.findOneAndUpdate(
             { thoughts: req.params.thoughtId },
             { $pull: { thoughts: req.params.thoughtId } },
             { new: true }

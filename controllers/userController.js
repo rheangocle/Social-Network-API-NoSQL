@@ -34,6 +34,7 @@ module.exports = {
 
   // Get a single user by id
   getSingleUser(req, res) {
+    //this could also be User.findById
     User.findOne({ _id: req.params.userId })
       .select('-__v')
       //populating thoughts and friends
@@ -57,12 +58,19 @@ module.exports = {
   //updating user, needs updating
   updateUser(req, res) {
     User.findOneAndUpdate(
-      { _id: req.params.userId })
+      { _id: req.params.userId },
+      { $set: req.body },
+      { runValidators: true, new: true }
+    )
       // include push statement here for updating thoughts and friends
-      .then(dbUserData => {
-        res.json(dbUserData);
-      }).catch(err => {
-        res.json(err)
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: 'No user with this id!' })
+          : res.json(video)
+      )
+      .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
       });
   },
 
@@ -88,14 +96,14 @@ module.exports = {
       .then((thought) =>
         !thought
           ? res.status(404).json({
-            message: 'User deleted, but no thoughts found',
+            message: 'User created, but no thought with this id',
           })
           : res.json({ message: 'User successfully deleted' })
       )
       .then((reaction) =>
         !reaction
           ? res.status(404).json({
-            message: 'User deleted, but no reactions found',
+            message: 'User deleted, but no reactions found with this id',
           })
           : res.json({ message: 'User successfully deleted' })
       )
@@ -124,14 +132,13 @@ module.exports = {
         !friend
           ? res
             .status(404)
-            .json({ message: 'No friend found with that ID :(' })
+            .json({ message: 'No friend found with that ID' })
           : res.json(friend)
       )
       .catch((err) => res.status(500).json(err));
   },
 
   //this needs to be remove friend
-  // Remove assignment from a student
   removeFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
@@ -142,7 +149,7 @@ module.exports = {
         !friend
           ? res
             .status(404)
-            .json({ message: 'No friend found with that ID :(' })
+            .json({ message: 'No friend found with that ID.' })
           : res.json(friend)
       )
       .catch((err) => res.status(500).json(err));
