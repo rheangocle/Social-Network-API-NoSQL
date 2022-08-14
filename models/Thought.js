@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, Types, model } = require('mongoose');
 const reactionSchema = require('./Reaction');
 
 const thoughtSchema = new Schema(
@@ -24,9 +24,21 @@ const thoughtSchema = new Schema(
     toJSON: {
       getters: true,
     },
-    // id: false,
+    toJSON: {
+      virtuals: true,
+    },
+    id: false,
   }
 );
+
+// Create a virtual called friendCount that retrieves the length of the user's friends array field on query
+thoughtSchema
+  .virtual('friendCount')
+  // Getter
+  .get(function () {
+    return this.friends.length;
+  });
+
 
 const Thought = model('thought', thoughtSchema);
 
