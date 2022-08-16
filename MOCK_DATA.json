@@ -1,4 +1,4 @@
-[
+users: [
   {
     "username": "dburgyn0",
     "email": "lcoundley0@wikia.com"
@@ -18,5 +18,46 @@
   {
     "username": "medison4",
     "email": "lpearman4@businessinsider.com"
+  }
+]
+
+thoughts: [
+  {
+    "thoughtText": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla.",
+  },
+  {
+    "thoughtText": "Maecenas pulvinar lobortis est."
+  },
+  {
+    "thoughtText": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque."
+  },
+  {
+    "thoughtText": "Etiam justo. Etiam pretium iaculis justo."
+  },
+  {
+    "thoughtText": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede."
+  }
+]
+
+reactions: [
+  {
+    "reactionBody": "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti.",
+    "username": "dburgyn0",
+  },
+  {
+    "reactionBody": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "username": "tbeavington1",
+  },
+  {
+    "reactionBody": "Suspendisse potenti.",
+    "username": "gadamiec2",
+  },
+  {
+    "reactionBody": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.",
+    "username": "medison4",
+  },
+  {
+    "reactionBody": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "username": "pnewson3",
   }
 ]
