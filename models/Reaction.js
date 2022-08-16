@@ -18,7 +18,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: new Date().toLocaleString(),
+      get: date => date.toLocaleString()
     },
   },
   {
@@ -29,6 +29,6 @@ const reactionSchema = new Schema(
   }
 );
 
-const Reaction = model('reaction', reactionSchema);
+//const Reaction = model('reaction', reactionSchema);
 
-module.exports = Reaction;
+module.exports = reactionSchema;

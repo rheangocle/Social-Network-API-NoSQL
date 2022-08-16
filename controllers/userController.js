@@ -3,26 +3,26 @@ const { ObjectId } = require('mongoose').Types;
 const { User, Thought, Reaction } = require('../models');
 
 // TODO: Create an aggregate function to get the number of students overall
-const headCount = async () =>
-  User.aggregate()
-    // Your code here
-    .then((numberOfUserss) => numberOfUsers);
+// const headCount = async () =>
+//   User.aggregate()
+//     // Your code here
+//     .then((numberOfUserss) => numberOfUsers);
 
 // Execute the aggregate method on the Student model and calculate the overall grade by using the $avg operator
-const thought = async (userId) =>
-  User.aggregate([
-    // TODO: Ensure we include only the student who can match the given ObjectId using the $match operator
-    {
-      // Your code here
-    },
-    {
-      $unwind: '$thoughts',
-    },
-    // TODO: Group information for the student with the given ObjectId alongside an overall grade calculated using the $avg operator
-    {
-      // Your code here
-    },
-  ]);
+// const thought = async (userId) =>
+//   User.aggregate([
+//     // TODO: Ensure we include only the student who can match the given ObjectId using the $match operator
+//     {
+//       // Your code here
+//     },
+//     {
+//       $unwind: '$thoughts',
+//     },
+//     // TODO: Group information for the student with the given ObjectId alongside an overall grade calculated using the $avg operator
+//     {
+//       // Your code here
+//     },
+//   ]);
 
 module.exports = {
   // Get all users
