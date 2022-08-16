@@ -12,7 +12,7 @@ const thoughtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
-      get: (date) => timeSince(date),
+      get: new Date().toLocaleString(),
     },
     username: {
       type: String,
@@ -31,14 +31,13 @@ const thoughtSchema = new Schema(
   }
 );
 
-// Create a virtual called friendCount that retrieves the length of the user's friends array field on query
+//Retrieves length of thoughts' reactions array
 thoughtSchema
-  .virtual('friendCount')
+  .virtual('reactionCount')
   // Getter
   .get(function () {
-    return this.friends.length;
+    return this.reactions.length;
   });
-
 
 const Thought = model('thought', thoughtSchema);
 

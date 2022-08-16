@@ -11,13 +11,11 @@ const userSchema = new Schema(
     },
     email: {
       type: String,
-      required: "Please enter an email address.",
+      required: [true, "Please enter an email address."],
       unique: true,
-      validate: {
-        validator: function (v) {
-          return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/.test(v);
-        },
-      }
+      match: [
+        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+      ],
     },
     thoughts: [
       {
@@ -33,12 +31,21 @@ const userSchema = new Schema(
     ],
   },
   {
-    // toJSON: {
-    //   virtuals: true,
-    // },
+    toJSON: {
+      virtuals: true,
+    },
     id: false,
   }
 );
+
+//Retrieves length of user's friends array
+userSchema
+  .virtual('friendCount')
+  // Getter
+  .get(function () {
+    return this.friends.length;
+  });
+
 
 const User = model('user', userSchema);
 

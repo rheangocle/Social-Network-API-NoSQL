@@ -11,7 +11,7 @@ Creating an API for a social media network using MongoDB for a NoSQL database so
 * [Features](#features)
 * [Installations](#installations)
 * [Usage](#usage)
-* [Features](#Features)
+* [Mock-up](#mock-up)
 * [Author](#author)
 
 ## Features
@@ -29,8 +29,6 @@ npm i mongoose --save
 ```
 
 ## Usage
-
-## Features
 
 ## Acceptance Criteria
 
@@ -52,21 +50,13 @@ The following animations show examples of the application's API routes being tes
 
 The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
 
-![Demo of GET routes to return all users and all thoughts being tested in Insomnia.](./Assets/18-nosql-homework-demo-01.gif)
-
 The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
 
-![Demo that shows GET routes to return a single user and a single thought being tested in Insomnia.](./Assets/18-nosql-homework-demo-02.gif)
-
 The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
-
-![Demo that shows the POST, PUT, and DELETE routes for users being tested in Insomnia.](./Assets/18-nosql-homework-demo-03.gif)
 
 In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
 
 The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
-
-![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
 
 In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
 
@@ -221,6 +211,10 @@ Need:
 * A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
 
 * The URL of the GitHub repository.
+
+## Author
+
+Check out my [Github profile](https://github.com/rheangocle) if you are interested in seeing more. For questions, please email me at rheangocle@gmail.com.
 
 ---
 Copyright © 2022 Rhea Le
