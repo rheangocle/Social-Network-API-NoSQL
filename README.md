@@ -14,7 +14,7 @@ An API created for a social media network using MongoDB for a NoSQL database so 
 * [Mock-up](#mock-up)
 * [Author](#author)
 
-## 👩🏻‍💻 Features
+## ⭐ Features
 
 * Node.js
 * Express.js
@@ -29,7 +29,7 @@ Mongoose - ODM library for MongoDB
 npm i mongoose --save
 ```
 
-## 👆 Usage
+## 👩🏻‍💻 Usage
 
 When the server is started, the Mongoose models will be synced with the MongoDB database.
 Routes available in Insomnia:
