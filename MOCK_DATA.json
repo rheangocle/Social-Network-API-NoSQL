@@ -24,40 +24,45 @@ users: [
 thoughts: [
   {
     "thoughtText": "Nunc purus. Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla.",
+    "username": "tbeavington1"
   },
   {
-    "thoughtText": "Maecenas pulvinar lobortis est."
+    "thoughtText": "Maecenas pulvinar lobortis est.",
+    "username": "dburgyn0"
   },
   {
-    "thoughtText": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque."
+    "thoughtText": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
+    "username": "gadamiec2"
   },
   {
-    "thoughtText": "Etiam justo. Etiam pretium iaculis justo."
+    "thoughtText": "Etiam justo. Etiam pretium iaculis justo.",
+    "username": "pnewson3"
   },
   {
-    "thoughtText": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede."
+    "thoughtText": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+    "username": "medison4"
   }
 ]
 
 reactions: [
   {
     "reactionBody": "Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti.",
-    "username": "dburgyn0",
+    "username": "dburgyn0"
   },
   {
     "reactionBody": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    "username": "tbeavington1",
+    "username": "tbeavington1"
   },
   {
     "reactionBody": "Suspendisse potenti.",
-    "username": "gadamiec2",
+    "username": "gadamiec2"
   },
   {
     "reactionBody": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo.",
-    "username": "medison4",
+    "username": "medison4"
   },
   {
     "reactionBody": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-    "username": "pnewson3",
+    "username": "pnewson3"
   }
 ]

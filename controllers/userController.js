@@ -74,51 +74,26 @@ module.exports = {
   },
 
   //this should be delete user
-  // Delete a student and remove them from the course
   deleteUser(req, res) {
     User.findOneAndRemove({ _id: req.params.userId })
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'There is no user with that Id.' })
-          : Thought.findOneAndUpdate(
-            { users: req.params.userId },
-            { $pull: { users: req.params.userId } },
-            { new: true }
+          : Thought.deleteMany(
+            { _id: { $in: user.thoughts } },
           ),
-        //   Reaction.findOneAndUpdate(
+        //   Reaction.deleteMany(
         //     { users: req.params.userId },
         //     { $pull: { users: req.params.userId } },
         //     { new: true }
 
         // )
       )
-      .then((thought) =>
-        !thought
-          ? res.status(404).json({
-            message: 'User created, but no thought with this id',
-          })
-          : res.json({ message: 'User successfully deleted' })
-      )
-      .then((reaction) =>
-        !reaction
-          ? res.status(404).json({
-            message: 'User deleted, but no reactions found with this id',
-          })
-          : res.json({ message: 'User successfully deleted' })
-      )
-      .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-      });
+      .then(() => res.json({ message: 'User and associated thoughts deleted!' }))
+      .catch((err) => res.status(500).json(err));
   },
 
-  // { users: req.params.userId },
-  // { $pull: { users: req.params.userId } },
-  // { new: true }
-
-
-  //this needs to be add friend
-  // Add an assignment to a student
+  // Add friend to user
   addFriend(req, res) {
     console.log('You are adding a friend');
     console.log(req.body);
