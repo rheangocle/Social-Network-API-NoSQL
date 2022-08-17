@@ -21,14 +21,12 @@ const userSchema = new Schema(
       {
         type: Schema.Types.ObjectId,
         ref: 'thought',
-        // ref might have to be lowercase
       },
     ],
     friends: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'User',
-        // this might have to be lowercase
+        ref: 'user',
       },
     ],
   },

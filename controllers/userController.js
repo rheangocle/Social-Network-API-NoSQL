@@ -79,15 +79,11 @@ module.exports = {
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'There is no user with that Id.' })
+
+          // BONUS: Remove a user's associated thoughts when deleted.
           : Thought.deleteMany(
             { _id: { $in: user.thoughts } },
-          ),
-        //   Reaction.deleteMany(
-        //     { users: req.params.userId },
-        //     { $pull: { users: req.params.userId } },
-        //     { new: true }
-
-        // )
+          )
       )
       .then(() => res.json({ message: 'User and associated thoughts deleted!' }))
       .catch((err) => res.status(500).json(err));
