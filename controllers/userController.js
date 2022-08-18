@@ -1,4 +1,3 @@
-// ObjectId() method for converting studentId string into an ObjectId for querying database
 const { ObjectId } = require('mongoose').Types;
 const { User, Thought, Reaction } = require('../models');
 
@@ -32,14 +31,13 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  //updating user, needs updating
+  //updating user
   updateUser(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },
       { $set: req.body },
       { runValidators: true, new: true }
     )
-      // include push statement here for updating thoughts and friends
       .then((user) =>
         !user
           ? res.status(404).json({ message: 'No user with this id!' })
@@ -51,7 +49,7 @@ module.exports = {
       });
   },
 
-  //this should be delete user
+  //deleting a user
   deleteUser(req, res) {
     User.findOneAndRemove({ _id: req.params.userId })
       .then((user) =>
@@ -86,7 +84,7 @@ module.exports = {
       .catch((err) => res.status(500).json(err));
   },
 
-  //this needs to be remove friend
+  //Removing a friend
   removeFriend(req, res) {
     User.findOneAndUpdate(
       { _id: req.params.userId },

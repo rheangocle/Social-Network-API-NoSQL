@@ -14,7 +14,7 @@ An API created for a social media network using MongoDB for a NoSQL database so 
 * [Mock-up](#mock-up)
 * [Author](#author)
 
-## ⭐ Features
+## ✨ Features
 
 * Node.js
 * Express.js
@@ -43,19 +43,31 @@ Routes available in Insomnia:
 
 ## 🖼 Mock Up
 
-The following animations show examples of the application's API routes being tested in Insomnia.
+📹 [Walkthrough Video](https://drive.google.com/file/d/1JBrfKy6YljAnN12EzUUUkd6piHky2zwU/view?usp=sharing)
 
-The following animation shows GET routes to return all users and all thoughts being tested in Insomnia:
+GET routes to return all users and all thoughts being tested in Insomnia:
 
-The following animation shows GET routes to return a single user and a single thought being tested in Insomnia:
+![Animation showing GET routes for all users and all thoughts in Insomnia](./assets/GET-users-thoughts.gif)
 
-The following animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia:
+GET routes to return a single user and a single thought:
 
-In addition to this, your walkthrough video should show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia.
+![Animation showing GET routes for single user and single thought in Insomnia](./assets/GET-single-user-thought.gif)
 
-The following animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia:
+POST, PUT, and DELETE routes for users:
 
-In addition to this, your walkthrough video should show the POST and DELETE routes for reactions to thoughts being tested in Insomnia.
+![Animation showing the POST, PUT, and DELETE routes for users being tested in Insomnia](./assets/POST-PUT-DELETE-user.gif)
+
+POST, PUT, and DELETE routes for thoughts:
+
+![Animation showing the POST, PUT, and DELETE routes for thoughts being tested in Insomnia](./assets/POST-PUT-DELETE-thought.gif)
+
+POST and DELETE routes for reactions to thoughts:
+
+![Animation showing the POST and DELETE routes for reactions to thoughts being tested in Insomnia](./assets/POST-DELETE-reaction.gif)
+
+POST and DELETE routes for a user’s friend list:
+
+![Animation showing the POST and DELETE routes for user's friends being tested in Insomnia](./assets/POST-DELETE-friend.gif)
 
 ### 👋 Author
 
